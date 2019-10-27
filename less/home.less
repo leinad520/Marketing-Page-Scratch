@@ -2,6 +2,14 @@
     height: 100vh;
     background-image: url("../images/header-bg-large.png");
     background-size: cover;
+    @media @mobile {
+        background-size: stretch;
+    }
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
 }
 
 .home-text {
@@ -9,15 +17,27 @@
     flex-direction: column;
     // border: 1px solid white;
     width: 40%;
-    margin-top: 250px;
     margin-left: 10%;
     line-height: 1.7em;
     p, h1, input {
         padding: 10px;
     }
+    @media @mobile {
+        margin-top: 100px;
+        width: 100%;
+
+    }
 }
 
 .home-iphone {
-    height: 40vw;
+    height: auto;
+    max-width: 40%;
     margin-top: 100px;
+    @media @tablet {
+        display: none;
+    }
+    @media @mobile {
+        display: none;
+    }
 }
+

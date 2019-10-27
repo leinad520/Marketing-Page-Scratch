@@ -4,9 +4,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    img.iphone-mockup {
+    .iphone-mockup {
         align-self: center;
-        width: 400px;
+        max-width: 25%;
+        height: auto;
+        @media tablet {
+            display: none;
+        }
+        @media @mobile {
+            display: none;
+        }
     }
     input {
         margin-top: 40px;

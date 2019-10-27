@@ -154,11 +154,19 @@ nav a {
   background-image: url("../images/header-bg-large.png");
   background-size: cover;
 }
+@media (max-width: 500px) {
+  #Home-section {
+    background-size: stretch;
+  }
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
 .home-text {
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin-top: 250px;
   margin-left: 10%;
   line-height: 1.7em;
 }
@@ -167,9 +175,26 @@ nav a {
 .home-text input {
   padding: 10px;
 }
+@media (max-width: 500px) {
+  .home-text {
+    margin-top: 100px;
+    width: 100%;
+  }
+}
 .home-iphone {
-  height: 40vw;
+  height: auto;
+  max-width: 40%;
   margin-top: 100px;
+}
+@media (max-width: 800px) {
+  .home-iphone {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .home-iphone {
+    display: none;
+  }
 }
 #About-section {
   height: 100vh;
@@ -178,9 +203,20 @@ nav a {
   align-items: center;
   justify-content: space-around;
 }
-#About-section img.iphone-mockup {
+#About-section .iphone-mockup {
   align-self: center;
-  width: 400px;
+  max-width: 25%;
+  height: auto;
+}
+@media tablet {
+  #About-section .iphone-mockup {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  #About-section .iphone-mockup {
+    display: none;
+  }
 }
 #About-section input {
   margin-top: 40px;
